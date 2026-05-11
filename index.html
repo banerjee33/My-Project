@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soumili Bandhyopadhyay | Resume</title>
+
+<style>
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10"><defs><pattern id="grain" width="100" height="10" patternUnits="userSpaceOnUse"><circle cx="25" cy="5" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="5" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="10" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* Card Styles */
+.card {
+    margin: 30px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border-left: 5px solid #3498db;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.card h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #3498db;
+    display: inline-block;
+    position: relative;
+}
+
+.card h2::after {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 2px;
+}
+
+/* Profile Info */
+.info p {
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.info span {
+    font-weight: 600;
+    color: #2c3e50;
+    min-width: 120px;
+    display: inline-block;
+}
+
+/* Lists */
+.card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card ul li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 1rem;
+}
+
+.card ul li::before {
+    color: #3498db;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.1rem;
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skill-box {
+    width: 45%;
+}
+
+.skill-box ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.skill-box li {
+    background: #89CFF0;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+
+/* Projects Section */
+.projects {
+    margin-top: 20px;
+}
+
+.pro {
+    background: linear-gradient(145deg, #89CFF0, #734F96);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #f39c12;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.pro:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 25px rgba(243, 156, 18, 0.2);
+}
+
+.pro h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        border-radius: 10px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .card {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+    
+    .skills {
+        grid-template-columns: 1fr;
+    }
+    
+    .info p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 30px 15px;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .card h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        box-shadow: none;
+    }
+    
+    .container {
+        box-shadow: none;
+        max-width: none;
+    }
+    
+    header {
+        background: #2c3e50 !important;
+        -webkit-print-color-adjust: exact;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <header>
+        <h1>Soumili Bandhyopadhyay</h1>
+        <p class="tagline">Resume</p>
+    </header>
+
+    <!-- Profile -->
+    <section class="card">
+        <h2>Profile</h2>
+        <div class="info">
+		
+			<div class="information">
+                <h3>About Me</h3>
+                <ul>
+                    <li>I am a 3rd year Diploma student in Computer Science & Technology with knowledge of web development and programming.
+Skilled in coding languages and problem-solving with good teamwork abilities.
+Quick learner and passionate about learning new technologies.
+</li>
+				<p><span><b>Date of Birth:</b></span> 14 February, 2007</p>
+        </div>
+    </section>
+	
+	 <section class="card">
+        <h2>Contact</h2>
+        <div class="cont">
+			<p><span><b>Address:</b></span> Dumdum Road, Kolkata - 700074</p>
+            <p><span><b>Email id:</b></span> soumilibandyopadhyay33@gmail.com</p>
+		 </div>
+    </section>
+
+    <!-- Education -->
+    <section class="card">
+        <h2>Education</h2>
+        <ul>
+            <li><b>--></b> 12th Pass - 2024</li>
+			<li><b>--></b> Currently appering - Diploma in computer science & technology, Passout year - 2026 </li>
+			</ul>
+    </section>
+
+    <!-- Skills -->
+    <section class="card">
+        <h2>Skills</h2>
+        <div class="skills">
+
+            <div class="skill-box">
+                <h3>Coding</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+					<li>C Programming</li>
+                    <li>Python</li>
+                    <li>Java</li>
+					<li>SQL</li>
+					<li>Embedded C programming</li>
+					<li>MS Office</li>
+                </ul>
+            </div>
+
+            <div class="skill-box">
+                <h3>Language</h3>
+                <ul>
+                    <li>English</li>
+                    <li>Hindi</li>
+					<li>Bengali</li>
+					<li>Odia</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+	
+	<section class="card">
+        <h2>Projects</h2>
+        <div class="projects">
+
+            <div class="pro">
+                <h3>Home Automation</h3>
+                <ul>
+					<li> <b>Smart home automation system using internet of things(IOT) technologies.</b>
+					 <br> <b>Level 1 –</b> Designed an IoT-based automatic door system using Arduino Uno, IR sensors, and motor driver integration for hands-free access control.</br>
+		<b>Level 2 -</b> Developed a rain-triggered automated pulley mechanism using ESP32 for real-time environmental sensing and smart asset protection.</li>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Soumili Bandhyopadhyay</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
